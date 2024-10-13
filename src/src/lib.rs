@@ -1,5 +1,5 @@
 #[tauri::command]
-fn my_custom_command() -> String {
+fn hello() -> String {
   "Hello, world!".into()
 }
 
@@ -16,7 +16,7 @@ pub fn run() {
             }
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![my_custom_command])
+        .invoke_handler(tauri::generate_handler![hello])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
