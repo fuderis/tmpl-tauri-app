@@ -16,7 +16,7 @@ pub fn run() {
             }
             Ok(())
         })
-        .invoke_handler(tauri::generate_handler![hello])
+        .invoke_handler(tauri::generate_handler![ hello ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
