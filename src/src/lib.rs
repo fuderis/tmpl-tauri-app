@@ -1,6 +1,6 @@
 #[tauri::command]
-fn hello() -> String {
-  "Hello, world!".into()
+fn hello(name: String) -> String {
+  format!("Hello, {name}!")
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
