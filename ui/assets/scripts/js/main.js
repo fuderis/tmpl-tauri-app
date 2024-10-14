@@ -1,4 +1,4 @@
-const invoke = window.__TAURI__.core.invoke;  //  DO NOT REMOVE!!
+const invoke = window.__TAURI__.core.invoke;  // DO NOT REMOVE!!
 
 // Invoke the command
 invoke("hello", { name: "world" })
