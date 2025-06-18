@@ -1,1 +1,3 @@
-/src/target
+src/target/
+src/vendor/
+src/gen/
