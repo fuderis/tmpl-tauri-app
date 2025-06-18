@@ -1,23 +1,23 @@
 [package]
-name = "tauri_app"
-version = "0.1.0"
+name = "tauri-app"
 description = "A Tauri App"
-authors = ["SynapDrake <SynapDrake@yandex.ru>"]
-license = ""
-repository = ""
-edition = "2021"
+version = "0.1.0"
+authors = ["Bulat Sh. <t.me/fuderis>"]
+edition = "2024"
 build = "src/build.rs"
 
 [lib]
-name = "app_lib"
+name = "app"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]
-tauri-build = { version = "2.0.1" }
+tauri-build = { version = "2.0.1", features = ["config-toml"] }
 
 [dependencies]
-tauri = { version = "2.0.3" }
-tauri-plugin-log = "2.0.0-rc"
+macron = { version = "0.1.5", features = ["derive", "string"] }
+tokio = { version = "1.45.1", features = ["full"] }
+tauri = { version = "2.0.3", features = ["config-toml"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 log = "0.4"
+rand = "0.8.5"
